@@ -19,6 +19,9 @@ program
 .option('-i, --telescope-device <path>', 'system path to telescope device', String, '')
 .option('-a, --camera-device <path>', 'system path to camera device', String, '')
 .option('-c, --config <path>', 'configuration file path to setup several servers', String, '')
+.option('-r, --ra <RA>','ra in format HH.MM.SS.s', String, '00.00.00.0')
+.option('-x, --xdec','declination in format DD.MM.SS', String, '00.00.00')
+
 .parse(process.argv);
 
 function createServer(params) {

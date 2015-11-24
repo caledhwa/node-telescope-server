@@ -22,10 +22,10 @@ function Telescope(params) {
 
   // Session closed
   this.device.on("end", function () {
-    console.log("Nextar telescope disconected!");
+    console.log("Nexstar telescope disconected!");
   });
 
-  // Incomming data
+  // Incoming data
   this.device.on("data", function (data) {
     var ibuffer = new ExponentialBuffer(data)
       , ra_int
@@ -49,7 +49,7 @@ function Telescope(params) {
   this.goto = function (position) {
 
     if (!params.quiet) {
-      console.log("Moving nextar telescope to: ", position);
+      console.log("Moving nexstar telescope to: ", position);
     }
 
     // Add the received command to the queue and process it
